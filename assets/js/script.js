@@ -3,7 +3,7 @@
 const counterContainer = document.querySelector('.counter-container');
 const tomatoContainer = document.querySelector('.tomato-container')
 
-//funzione per la creazione di elementi nel DOM
+//FUNCTION FOR CREATING DOM ELEMENTS
 function createDOMElement(tag, content, style) {
   const element = document.createElement(tag); 
   element.textContent = content;
@@ -13,14 +13,14 @@ function createDOMElement(tag, content, style) {
   return element
 }
 
-//Creazione degli elementi base del counter
+//CREATING BASIC ELEMENTS FOR COUNTER
 const plusButton = createDOMElement('button','+ 1', 'btn')
 const resultWindow = createDOMElement('div', '', 'counter-result-container');
 const result = createDOMElement('p', 0, '');
 const minusButton = createDOMElement('button','- 1', 'btn')
 const resetButton = createDOMElement('button', 'reset', 'btn');
 
-//Posizionamento degli elementi base del counter
+//POSITIONING BASIC ELEMENTS
 counterContainer.append(minusButton);
 minusButton.after(resultWindow);
 resultWindow.append(result);
@@ -28,7 +28,7 @@ resultWindow.after(plusButton);
 counterContainer.append(resetButton);
 
 
-//funzioni di base del counter
+//BASIC FUNCTION FOR COUNTER
 function resultUp (){
   result.innerText = Number(result.innerText) + 1;
   return
@@ -45,10 +45,11 @@ function reset() {
   while(tomatoContainer.firstChild) {
     tomatoContainer.removeChild(tomatoContainer.firstChild);
   }
-  
+  stopStopwatch();
+  pauseResumeStopwatch.textContent = 'Pause';
 }
 
-//funzioni per la creazione di pomodori nel campo
+//CREATING TOMATOES FUNCTION
 
 function createTomato() {
   const tomato = createDOMElement('div','','tomato');
@@ -59,13 +60,11 @@ function removeTomato() {
   tomatoContainer.removeChild(tomatoContainer.lastChild);
 }
 
-//funzioni per definire da quanti pomodori partire
+//STARTING FROM A SPECIFIC NUMBER OF TOMATOES FUNCTION
 const startingTomatoesButton = document.querySelector('.starting-from-button');
 
 function startingFrom() {
   let startingValueInput = document.querySelector('#starting-tomatoes');
-  
-
   result.innerText = startingValueInput.value;
 
   for (let i = 0; i < startingValueInput.value; i++) {
@@ -75,10 +74,14 @@ function startingFrom() {
   startingValueInput.value = '';
 }
 
-//creazione stopwatch
+//STOPWATCH
 //DA SISTEMARE: 1. il fatto che più premo il tasto, più pomodori compaiono ogni momento. 2. inserire pausa 3. inserire reset del timer (potrebbe essere sempre lo stesso pulsante reset) 
 const stopwatchElement = document.getElementById('stopwatch');
+const startingStopwatchButton = document.querySelector('.startStopwatch');
+const pauseResumeStopwatch = document.querySelector('.pauseResumeStopwatch'); 
 let secondsPassed = 0;
+let intervalStopWatch
+let intervalCreateTomato
 
 function startStopwatch() {
   function updateStopwatch() {
@@ -89,19 +92,27 @@ function startStopwatch() {
     const seconds = secondsPassed % 60;
 
     stopwatchElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
   }
  
-  setInterval(updateStopwatch, (1000));
+  intervalStopWatch = setInterval(updateStopwatch, 1000); //defines the update of stopwatch text every second
+  intervalCreateTomato = setInterval(createTomato, 1000) //defines when must a new tomato be created (1000ms per debugging; 1000*60*25, 25 minutes, for real app)
+
 }
 
-const startingStopwatchButton = document.querySelector('.startStopwatch');
+function stopStopwatch() {
+  secondsPassed = 0;
+  clearInterval(intervalStopWatch);
+  clearInterval(intervalCreateTomato);
+  stopwatchElement.textContent = '00:00:00';
+}
 
-startingStopwatchButton.addEventListener('click', ()=> {
-  startStopwatch();
-  setInterval(createTomato, 60*1000)
-})
+function pauseStopwatch() {
+  clearInterval(intervalStopWatch);
+  clearInterval(intervalCreateTomato);
+}
 
-//applicazione delle funzioni ai pulsanti
+//EVENT LISTENER FOR BUTTONS
 plusButton.addEventListener('click', ()=>{
   resultUp();
   createTomato();
@@ -122,3 +133,23 @@ startingTomatoesButton.addEventListener ('click', () => {
   reset();
   startingFrom();
 })
+
+startingStopwatchButton.addEventListener('click', ()=> {
+ if(stopwatchElement.textContent != '00:00:00') return;
+  startStopwatch();
+})
+
+pauseResumeStopwatch.addEventListener('click', ()=> {
+  if(stopwatchElement.textContent != '00:00:00'){
+  if (pauseResumeStopwatch.textContent === 'Pause') {
+    pauseResumeStopwatch.textContent = 'Resume';
+    pauseStopwatch();
+  } else {
+    pauseResumeStopwatch.textContent = 'Pause'
+    startStopwatch();
+  }
+}
+
+})
+
+
