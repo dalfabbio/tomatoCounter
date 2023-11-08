@@ -1,8 +1,8 @@
 
 /*CSS*/
-
 :root {
   --tomato-width: 100px;
+  --settings-tomato-container-width: clamp(calc((var(--tomato-width)*3) + 5px), 70%, calc((var(--tomato-width)*12) + 5px)); /*RIVEDERE LA SPAZIATURA*/
 }
 
 * {
@@ -19,45 +19,122 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(248, 153, 0, 0.616);
+  padding: 1rem;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+h2 {
+  margin-bottom: .3rem;
+}
+
+ul, ol {
+  list-style-position: inside;
+}
+
+.description {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+.pomodoro-technique-description {
+  /* min-width: 150px; */
+  justify-self: center;
+}
+
+.introduction {
+  /* min-width: 150px; */
+  justify-self: center;
+}
+
+#tools-list {
+  list-style: none;
+}
+
+
+#tools-list li:nth-child(1){
+  background-image: url(../icons/counting-hand.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  background-position: left; 
+}
+
+#tools-list li:nth-child(2){
+  background-image: url(../icons/starting-from.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 25px;
+  margin-bottom: 10px; 
+  background-position: left; 
+}
+
+#tools-list li:nth-child(3){
+  background-image: url(../icons/stopwatch.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 25px;
+  margin-bottom: 5px;
+  background-position: left; 
 }
 
 .settings {
   background-color: rgba(0, 128, 0, 0.463);
+  width: 100%;
   display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+
   align-items: center;
   justify-content: space-around;
-  flex-direction: column;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  padding: 1rem;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.counter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .counter-container {
-  width: 500px;
-  height: 250px;
   margin: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  flex: 0.5;
 }
 
 .btn {
   background-color: rgba(248, 153, 0, 0.616);
-  padding: 1rem;
+  padding: .6rem;
   color:white;
-  height: 25px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   align-content: center;
 }
 
-.btn:active {
-  box-shadow: 1px 2px 2px 8px black inset;
-}
-
 .counter-result-container {
-  width: 150px;
+  width: 50px;
   height: 50px;
   border-radius: 10px;
   background-color: white;
@@ -68,9 +145,28 @@ body {
   align-items: center;
 }
 
+.starting-from-container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.starting-from-container img {
+  width:50px;
+}
+
+.starting-from-button {
+  width: 50%;
+}
+
+.stopwatch-container {
+  margin: 1rem;
+  
+}
+
 .tomato-container {
   border: 1px solid red;
-  width: clamp(calc((var(--tomato-width)*3) + 5px), 70%, calc((var(--tomato-width)*12) + 5px)); /*RIVEDERE LA SPAZIATURA*/
+  width: var(--settings-tomato-container-width); /*RIVEDERE LA SPAZIATURA*/
   height: 500px;
   background-color: white;
   display: flex;
@@ -83,12 +179,4 @@ body {
   height: var(--tomato-width);
   background-color: red;
   border-radius: 50%;
-}
-
-.starting-from-container {
-  margin: 1rem;
-}
-
-.stopwatch-container {
-  margin: 1rem;
 }

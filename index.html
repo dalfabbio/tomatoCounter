@@ -7,22 +7,54 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <h1>The Tomato Counter</h1>
+  <div class="description">
+    <div class="pomodoro-technique-description">
+      <h2>Are you familiar with the <a href="https://todoist.com/it/productivity-methods/pomodoro-technique">Pomodoro Tecnique?</a></h2>
+      <p>
+        <ol>
+          <li>Pick a task</li>
+          <li>Focus for 25 minutes</li>
+          <li>Draw a tomato and take a short break (like 5 minutes)</li>
+          <li>Focus again for 25 minutes</li>
+          <li>Every four tomatoes, take a longer break (15/30 minutes)</li>
+        </ol>
+        At the end of the day check how many tomatoes you have!
+      </p>
+    </div>
+    <div class="introduction">
+      <h2>You can use the tools below to:</h2>
+      <p>
+        <ul id='tools-list'>
+          <li>Keep count of your tomatoes with the counter</li>
+          <li>Set a number of tomatoes to start with</li>
+          <li>Set up a stopwatch that every 25 minutes plant a tomato plant</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
   <div class="settings">
-    <div class="counter-container"></div>
+    <!-- <div class="tools"> -->
+      <div class="counter-section">
+        <img src="assets/icons/counting-hand.png" alt="counter icon">
+        <div class="counter-container">
+        </div>
+      </div>
 
-    <div class="starting-from-container">
-      <p>How many tomatoes have you already planted?</p>
-      <input id='starting-tomatoes' type="text" placeholder="1? 10?? 1000???">
-      <button class="starting-from-button btn">start from here</button>
-    </div>
+      <div class="starting-from-container">        <img src="assets/icons/starting-from.png" alt="starting from icon">
 
-    <div class="stopwatch-container">
-      <p id='stopwatch'>00:00:00</p>
-      <button class="startStopwatch btn">start timer</button>
-      <button class="pauseResumeStopwatch btn">Pause</button>
+        <p>How many tomatoes have you already planted?</p>
+        <input id='starting-tomatoes' type="text" placeholder="1? 10?? 1000???">
+        <button class="starting-from-button btn">start from here</button>
+      </div>
 
-    </div>
-
+      <div class="stopwatch-container">
+        <p id='stopwatch'>00:00:00</p>
+        <button class="startStopwatch btn">start timer</button>
+        <button class="pauseResumeStopwatch btn">Pause</button>
+      </div>
+    <!-- </div> -->
   </div>
 
   <div class="tomato-container"></div>

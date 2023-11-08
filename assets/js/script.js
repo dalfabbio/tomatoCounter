@@ -1,7 +1,10 @@
 //JS
 
 const counterContainer = document.querySelector('.counter-container');
+const startingTomatoesButton = document.querySelector('.starting-from-button');
+const stopwatchContainer = document.querySelector('.stopwatch-container');
 const tomatoContainer = document.querySelector('.tomato-container')
+const tools = document.querySelector('.tools');
 
 //FUNCTION FOR CREATING DOM ELEMENTS
 function createDOMElement(tag, content, style) {
@@ -25,7 +28,7 @@ counterContainer.append(minusButton);
 minusButton.after(resultWindow);
 resultWindow.append(result);
 resultWindow.after(plusButton);
-counterContainer.append(resetButton);
+tools.after(resetButton);
 
 
 //BASIC FUNCTION FOR COUNTER
@@ -61,7 +64,6 @@ function removeTomato() {
 }
 
 //STARTING FROM A SPECIFIC NUMBER OF TOMATOES FUNCTION
-const startingTomatoesButton = document.querySelector('.starting-from-button');
 
 function startingFrom() {
   let startingValueInput = document.querySelector('#starting-tomatoes');
@@ -75,7 +77,7 @@ function startingFrom() {
 }
 
 //STOPWATCH
-//DA SISTEMARE: 1. il fatto che più premo il tasto, più pomodori compaiono ogni momento. 2. inserire pausa 3. inserire reset del timer (potrebbe essere sempre lo stesso pulsante reset) 
+
 const stopwatchElement = document.getElementById('stopwatch');
 const startingStopwatchButton = document.querySelector('.startStopwatch');
 const pauseResumeStopwatch = document.querySelector('.pauseResumeStopwatch'); 
@@ -112,7 +114,7 @@ function pauseStopwatch() {
   clearInterval(intervalCreateTomato);
 }
 
-//EVENT LISTENER FOR BUTTONS
+//EVENT FOR BUTTONS
 plusButton.addEventListener('click', ()=>{
   resultUp();
   createTomato();
