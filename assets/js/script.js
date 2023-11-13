@@ -10,7 +10,9 @@ const tools = document.querySelector('.tools');
 function createDOMElement(tag, content, style) {
   const element = document.createElement(tag); 
   element.textContent = content;
-   if (style) {
+   if (Array.isArray(style)) {
+    element.classList.add(...style); //allows to add multiple classes through arrays
+  } else if (style) {
     element.classList.add(style);
   }
   return element
@@ -21,7 +23,7 @@ const plusButton = createDOMElement('button','+ 1', 'btn')
 const resultWindow = createDOMElement('div', '', 'counter-result-container');
 const result = createDOMElement('p', 0, '');
 const minusButton = createDOMElement('button','- 1', 'btn')
-const resetButton = createDOMElement('button', 'reset', 'btn');
+const resetButton = createDOMElement('button', 'RESET', ['btn', 'reset-button']);
 
 //POSITIONING BASIC ELEMENTS
 counterContainer.append(minusButton);
@@ -31,7 +33,7 @@ resultWindow.after(plusButton);
 tools.after(resetButton);
 
 
-//BASIC FUNCTION FOR COUNTER
+//FUNCTION FOR COUNTER
 function resultUp (){
   result.innerText = Number(result.innerText) + 1;
   return
@@ -49,7 +51,7 @@ function reset() {
     tomatoContainer.removeChild(tomatoContainer.firstChild);
   }
   stopStopwatch();
-  pauseResumeStopwatch.textContent = 'Pause';
+  pauseResumeStopwatch.textContent = 'PAUSE';
 }
 
 //CREATING TOMATOES FUNCTION
@@ -143,11 +145,11 @@ startingStopwatchButton.addEventListener('click', ()=> {
 
 pauseResumeStopwatch.addEventListener('click', ()=> {
   if(stopwatchElement.textContent != '00:00:00'){
-  if (pauseResumeStopwatch.textContent === 'Pause') {
-    pauseResumeStopwatch.textContent = 'Resume';
+  if (pauseResumeStopwatch.textContent === 'PAUSE') {
+    pauseResumeStopwatch.textContent = 'RESUME';
     pauseStopwatch();
   } else {
-    pauseResumeStopwatch.textContent = 'Pause'
+    pauseResumeStopwatch.textContent = 'PAUSE'
     startStopwatch();
   }
 }

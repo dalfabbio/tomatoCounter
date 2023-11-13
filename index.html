@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tomato Counter</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="/assets/img/tomato.png">
 </head>
 <body>
-  <h1>The Tomato Counter</h1>
+  <h1>THE MARVELLOUS TOMATO COUNTER</h1>
   <div class="description">
     <div class="pomodoro-technique-description">
-      <h2>Are you familiar with the <a href="https://todoist.com/it/productivity-methods/pomodoro-technique">Pomodoro Tecnique?</a></h2>
-      <p>
+      <h2>Are you familiar with the <a href="https://todoist.com/it/productivity-methods/pomodoro-technique">Pomodoro Tecnique</a>?</h2>
+      
         <ol>
           <li>Pick a task</li>
           <li>Focus for 25 minutes</li>
@@ -19,8 +20,8 @@
           <li>Focus again for 25 minutes</li>
           <li>Every four tomatoes, take a longer break (15/30 minutes)</li>
         </ol>
-        At the end of the day check how many tomatoes you have!
-      </p>
+        <p>At the end of the day check how many tomatoes you have!</p>
+      
     </div>
     <div class="introduction">
       <h2>You can use the tools below to:</h2>
@@ -35,26 +36,33 @@
   </div>
 
   <div class="settings">
-    <!-- <div class="tools"> -->
+    <div class="tools">
       <div class="counter-section">
-        <img src="assets/icons/counting-hand.png" alt="counter icon">
+        <img src="assets/icons/counting-hand.png" alt="counter section">
         <div class="counter-container">
         </div>
       </div>
 
-      <div class="starting-from-container">        <img src="assets/icons/starting-from.png" alt="starting from icon">
+      <div class="starting-from-section">        <img src="assets/icons/starting-from.png" alt="starting from section">
 
-        <p>How many tomatoes have you already planted?</p>
-        <input id='starting-tomatoes' type="text" placeholder="1? 10?? 1000???">
-        <button class="starting-from-button btn">start from here</button>
+        <div class='starting-from-input'>
+          <input id='starting-tomatoes' type="text" placeholder="How many tomatoes?">
+          <button class="starting-from-button btn">Draw!</button>
+        </div>
       </div>
 
-      <div class="stopwatch-container">
-        <p id='stopwatch'>00:00:00</p>
-        <button class="startStopwatch btn">start timer</button>
-        <button class="pauseResumeStopwatch btn">Pause</button>
+      <div class="stopwatch-section">
+        <img src="assets/icons/stopwatch.png" alt="stopwatch section">
+
+        <div class="stopwatch-container">
+          <p id='stopwatch'>00:00:00</p>
+          <div> <!-- just a wrapper -->
+            <button class="startStopwatch btn">START</button>
+            <button class="pauseResumeStopwatch btn">PAUSE</button>
+          </div>
+        </div>
       </div>
-    <!-- </div> -->
+    </div>
   </div>
 
   <div class="tomato-container"></div>

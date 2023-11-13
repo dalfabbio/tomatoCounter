@@ -1,56 +1,70 @@
 
 /*CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
 :root {
   --tomato-width: 100px;
-  --settings-tomato-container-width: clamp(calc((var(--tomato-width)*3) + 5px), 70%, calc((var(--tomato-width)*12) + 5px)); /*RIVEDERE LA SPAZIATURA*/
+  --background-color: #F7934C;
+  --btn-color:  #CC5803;
+  --settings-background-color: #FFC15E;
 }
+
+
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color:#1F1300;
+  font-family: 'Quicksand', sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(248, 153, 0, 0.616);
+  background-color: var(--background-color);
   padding: 1rem;
 }
 
 h1 {
   padding: 1rem;
+  font-weight: 700;
 }
 
 h2 {
   margin-bottom: .3rem;
+  font-weight: 600;
 }
 
 ul, ol {
   list-style-position: inside;
 }
 
+
+
 .description {
   display: flex;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-around;
-  width: 100%;
+  width: 95%;
 
 }
 
 .pomodoro-technique-description {
-  /* min-width: 150px; */
   justify-self: center;
 }
 
+.pomodoro-technique-description p {
+  font-weight: 600;
+}
+
 .introduction {
-  /* min-width: 150px; */
   justify-self: center;
 }
 
@@ -87,17 +101,16 @@ ul, ol {
 }
 
 .settings {
-  background-color: rgba(0, 128, 0, 0.463);
-  width: 100%;
+  background-color: var(--settings-background-color);
+  width: 90%;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   flex-wrap: wrap;
-
   align-items: center;
   justify-content: space-around;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-radius: 25px;
   padding: 1rem;
+  margin-top: 1rem;
 }
 
 .tools {
@@ -105,7 +118,7 @@ ul, ol {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-
+  width: 100%;
 }
 
 .counter-section {
@@ -124,13 +137,18 @@ ul, ol {
 }
 
 .btn {
-  background-color: rgba(248, 153, 0, 0.616);
+  background-color: var(--btn-color);
   padding: .6rem;
   color:white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   align-content: center;
+}
+
+.reset-button {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 .counter-result-container {
@@ -145,38 +163,62 @@ ul, ol {
   align-items: center;
 }
 
-.starting-from-container {
-  margin: 1rem;
+.starting-from-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: .5rem;
 }
 
-.starting-from-container img {
-  width:50px;
+.starting-from-section img {
+  margin-bottom: .5rem;
 }
+
+.starting-from-input {
+  display: flex;
+  gap: .5rem;
+}
+
+.starting-from-input input {
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
 
 .starting-from-button {
-  width: 50%;
+  width: 25%;
+}
+
+
+.stopwatch-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
 }
 
 .stopwatch-container {
-  margin: 1rem;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
 }
 
+
 .tomato-container {
-  border: 1px solid red;
-  width: var(--settings-tomato-container-width); /*RIVEDERE LA SPAZIATURA*/
-  height: 500px;
-  background-color: white;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  gap: .5rem;
+  padding: 1rem;
 }
 
 .tomato {
-  width: var(--tomato-width);
+  background-image: url(../img/tomato.png);
+  background-size: cover;
+  background-position: center;
   height: var(--tomato-width);
-  background-color: red;
-  border-radius: 50%;
+  width: var(--tomato-width); 
 }
