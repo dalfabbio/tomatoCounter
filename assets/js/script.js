@@ -67,10 +67,10 @@ function removeTomato() {
 
 //STARTING FROM A SPECIFIC NUMBER OF TOMATOES FUNCTION
 
+let startingValueInput = document.querySelector('#starting-tomatoes');
+ 
 function startingFrom() {
-  let startingValueInput = document.querySelector('#starting-tomatoes');
   result.innerText = startingValueInput.value;
-
   for (let i = 0; i < startingValueInput.value; i++) {
     createTomato();
   }
