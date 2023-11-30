@@ -167,6 +167,7 @@ ul, ol {
   flex-direction: column;
   align-items: center;
   gap: .5rem;
+  margin: 1rem;
 }
 
 .starting-from-section img {
