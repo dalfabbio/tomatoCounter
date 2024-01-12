@@ -1,14 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -19,38 +9,14 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/dalfabbio/tomatoCounter">
+    <img src="assets/img/tomato.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
-
-  <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
-</div>
-
-
+<h3 align="center">The Marvellous Tomato Counter</h3>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -82,122 +48,66 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+This project is the final assignament of the JavaScript Basic course of [Start To Impact University]. The task was simple: build a counter with javascript.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Few requirements:
+* Just JavaScript allowed, not Jquery neither frameworks (React, Angular, Vue...);
+* The +/- buttons and the counter value have to be implemented through JavaScript.\
+Any add ons functionality welcomed!
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### What's the deal with a tomato counter?
+The idea is to support anyone who might use *[the pomodoro tecnique]* to focus. This tecnique is a way to improve focus on a task, by drawing a tomato every 25 minutes of work. \
+But what if I don't have paper or a pen? Here it comes "The marvellous tomato counter", that draws the tomatoes for you!\
+You can use it to keep track of how long you focused on a work you want(or must) do.
 
+## Functionalities
+With the Marvellous Tomato Counter you can:
+* Simply keep count of your tomatoes manually with the counter, adding tomatoes to the screen
+* Set a number of tomatoes to start with, then add more with the counter
+* Set up a stopwatch that every 25 minutes add a tomato for you* \
+*\* For debugging reasons the stowatch function right now is set to add a tomato every second.*
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* ![HTML](assets\icons\html.png)
+* ![CSS](assets\icons\css.png)
+* ![JS](assets\icons\JS.png)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Future improvements
+* Add an animation when a tomato is added;
+* Add a sound everytime a tomato is added using the stopwatch: this way you do not need to switch to the tomato counter tab to see how much time has passed;
+* Add a "save your progress" functionality, allowing to know how much time you are investing on a single task;
+* Add to the stopwatch the possibility to toggle "break time!" which will make a sound when 25 minutes has passed, pause the stopwatch, and make another sound when 5 minutes has passed and it's time to go back to work.
 
 
+... Anything you think could be useful! Feel free to contribute.
 
-<!-- USAGE EXAMPLES -->
-## Usage
+### Contributing
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
+If you have a suggestion that would make this project more useful than it is or if you want to work on an improvement listed above, please do it!
+Fork the repo and create a pull request, or open an issue with the tag enhancement.
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/MarvellousFeature`)
+3. Commit your Changes (`git commit -m 'Added a MarvellousFeature'`)
+4. Push to the Branch (`git push origin feature/MarvellousFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Contacts
 
+Feel free to reach me if you have any advice or you want to collaborate!
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+[![linkedin](assets\icons\linkedin.png)][linkedinUrl]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,9 +116,9 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Tomato picture][tomatoPictureUrl]
+* Icons by [icons8][icons8Url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -216,6 +126,15 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Start To Impact University]: https://www.start2impact.it/
+[the pomodoro tecnique]: https://todoist.com/it/productivity-methods/pomodoro-technique
+[linkedinUrl]: https://www.linkedin.com/in/alessandro-fabbian-2a8261101/
+[tomatoPictureurl]: https://www.cleanpng.com/png-tomato-drawing-vegetable-clip-art-tomato-640540/download-png.html
+[icons8Url]: https://icons8.com/
+
+
+
+
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
 [contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
