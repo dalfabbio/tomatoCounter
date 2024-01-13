@@ -1,10 +1,10 @@
-//JS
-
+//BASIC VARIABLE DEFINITION
 const counterContainer = document.querySelector('.counter-container');
 const startingTomatoesButton = document.querySelector('.starting-from-button');
 const stopwatchContainer = document.querySelector('.stopwatch-container');
 const tomatoContainer = document.querySelector('.tomato-container')
 const tools = document.querySelector('.tools');
+
 
 //FUNCTION FOR CREATING DOM ELEMENTS
 function createDOMElement(tag, content, style) {
@@ -18,12 +18,14 @@ function createDOMElement(tag, content, style) {
   return element
 }
 
+
 //CREATING BASIC ELEMENTS FOR COUNTER
 const plusButton = createDOMElement('button','+ 1', 'btn')
 const resultWindow = createDOMElement('div', '', 'counter-result-container');
 const result = createDOMElement('p', 0, '');
 const minusButton = createDOMElement('button','- 1', 'btn')
 const resetButton = createDOMElement('button', 'RESET', ['btn', 'reset-button']);
+
 
 //POSITIONING BASIC ELEMENTS
 counterContainer.append(minusButton);
@@ -54,8 +56,8 @@ function reset() {
   pauseResumeStopwatch.textContent = 'PAUSE';
 }
 
-//CREATING TOMATOES FUNCTION
 
+//CREATING TOMATOES FUNCTION
 function createTomato() {
   const tomato = createDOMElement('div','','tomato');
   tomatoContainer.append(tomato);
@@ -66,7 +68,6 @@ function removeTomato() {
 }
 
 //STARTING FROM A SPECIFIC NUMBER OF TOMATOES FUNCTION
-
 let startingValueInput = document.querySelector('#starting-tomatoes');
  
 function startingFrom() {
@@ -79,7 +80,6 @@ function startingFrom() {
 }
 
 //STOPWATCH
-
 const stopwatchElement = document.getElementById('stopwatch');
 const startingStopwatchButton = document.querySelector('.startStopwatch');
 const pauseResumeStopwatch = document.querySelector('.pauseResumeStopwatch'); 
@@ -100,21 +100,24 @@ function startStopwatch() {
   }
  
   intervalStopWatch = setInterval(updateStopwatch, 1000); //defines the update of stopwatch text every second
+  intervalUpdateCounter = setInterval(resultUp, 1000); //defines the counter to be updated with the stopwatch
   intervalCreateTomato = setInterval(createTomato, 1000) //defines when must a new tomato be created (1000ms per debugging; 1000*60*25, 25 minutes, for real app)
-
 }
 
 function stopStopwatch() {
   secondsPassed = 0;
   clearInterval(intervalStopWatch);
   clearInterval(intervalCreateTomato);
+  clearInterval(intervalUpdateCounter);
   stopwatchElement.textContent = '00:00:00';
 }
 
 function pauseStopwatch() {
   clearInterval(intervalStopWatch);
   clearInterval(intervalCreateTomato);
+  clearInterval(intervalUpdateCounter);
 }
+
 
 //EVENT FOR BUTTONS
 plusButton.addEventListener('click', ()=>{
@@ -153,7 +156,4 @@ pauseResumeStopwatch.addEventListener('click', ()=> {
     startStopwatch();
   }
 }
-
 })
-
-

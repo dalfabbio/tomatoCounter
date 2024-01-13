@@ -1,4 +1,3 @@
-/*CSS*/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
 :root {
@@ -7,8 +6,6 @@
   --btn-color:  #CC5803;
   --settings-background-color: #FFC15E;
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -199,11 +196,9 @@ input[type=number] {
   text-align: center;
 }
 
-
 .starting-from-button {
   width: 25%;
 }
-
 
 .stopwatch-section {
   display: flex;
@@ -219,6 +214,9 @@ input[type=number] {
   gap: .5rem;
 }
 
+.pauseResumeStopwatch {
+  width: 4rem;
+}
 
 .tomato-container {
   width: 90%;
