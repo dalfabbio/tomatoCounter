@@ -7,7 +7,11 @@
   </a>
 
 <h3 align="center">The Marvellous Tomato Counter</h3>
+
+[GIVE IT A TRY!]
+
 </div>
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -114,7 +118,8 @@ Feel free to reach me if you have any advice or you want to collaborate!
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
+<!-- MARKDOWN LINKS -->
+[GIVE IT A TRY!]: https://dalfabbio.github.io/tomatoCounter/
 [Start To Impact University]: https://www.start2impact.it/
 [the pomodoro tecnique]: https://todoist.com/it/productivity-methods/pomodoro-technique
 [linkedinUrl]: https://www.linkedin.com/in/alessandro-fabbian-2a8261101/
