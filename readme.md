@@ -15,7 +15,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-      <li><a href="#what-is-the-deal-with-a-tomato-counter">What is the deal with a tomato counter?</a></li>
+      <li><a href="#what-is-the-deal-with-a-tomato-counter">What's the deal with a tomato counter?</a></li>
       </ul>
     </li>
     <li>
@@ -36,11 +36,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This project is the final assignament of the JavaScript Basic course of [Start To Impact University]. The task was simple: build a counter with javascript.
+This project is the final assignement of the JavaScript Basic course of [Start To Impact University]. The task was simple: build a counter with javascript.
 
 Few requirements:
 * Just JavaScript allowed, not Jquery neither frameworks (React, Angular, Vue...);
-* The +/- buttons and the counter value have to be implemented through JavaScript.\
+* The +/- buttons and the counter value have to be implemented through JavaScript.
+
 Any add ons functionality welcomed!
 
 
@@ -48,22 +49,22 @@ Any add ons functionality welcomed!
 
 ### What's the deal with a tomato counter?
 <a name="#what-is-the-deal-with-a-tomato-counter"></a>
-The idea is to support anyone who might use *[the pomodoro tecnique]* to focus. This tecnique is a way to improve focus on a task, by drawing a tomato every 25 minutes of work. \
-But what if I don't have paper or a pen? Here it comes "The marvellous tomato counter", that draws the tomatoes for you!\
+The idea is to support anyone who might use *[the pomodoro tecnique]* to focus. This tecnique is a way to improve the ability to focus on a task, by drawing a tomato every 25 minutes of work. \
+But what if I don't have paper or a pen? Here it comes *The marvellous tomato counter*, that draws the tomatoes for you!\
 You can use it to keep track of how long you focused on a work you want(or must) do.
 
 ## Functionalities
 With the Marvellous Tomato Counter you can:
-* Simply keep count of your tomatoes manually with the counter, adding tomatoes to the screen
-* Set a number of tomatoes to start with, then add more with the counter
-* Set up a stopwatch that every 25 minutes add a tomato for you* \
+* Simply keep count of your tomatoes manually with the counter, adding tomatoes to the screen;
+* Set a number of tomatoes to start with, then add more with the counter;
+* Set up a stopwatch that every 25 minutes add a tomato for you*. \
 *\* For debugging reasons the stowatch function right now is set to add a tomato every second.*
 
 ### Built With
 
-* ![HTML](assets\icons\html.png)
-* ![CSS](assets\icons\css.png)
-* ![JS](assets\icons\JS.png)
+* ![HTML](.\assets\icons\html.png)
+* ![CSS](.\assets\icons\css.png)
+* ![JS](.\assets\icons\JS.png)
 
 
 
@@ -83,12 +84,12 @@ With the Marvellous Tomato Counter you can:
 
 ### Contributing
 
-If you have a suggestion that would make this project more useful than it is or if you want to work on an improvement listed above, please do it!
+If you have a suggestion that would make this project more useful than it is or if you want to work on the improvements listed above, please do it!
 Fork the repo and create a pull request, or open an issue with the tag enhancement.
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/MarvellousFeature`)
 3. Commit your Changes (`git commit -m 'Added a MarvellousFeature'`)
-4. Push to the Branch (`git push origin feature/MarvellousFeature`)
+4. Push the Branch (`git push origin feature/MarvellousFeature`)
 5. Open a Pull Request
 
 
@@ -96,7 +97,7 @@ Fork the repo and create a pull request, or open an issue with the tag enhanceme
 
 Feel free to reach me if you have any advice or you want to collaborate!
 
-[![linkedin](assets\icons\linkedin.png)][linkedinUrl]
+[![linkedin](.\assets\icons\linkedin.png)][linkedinUrl]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,7 +106,7 @@ Feel free to reach me if you have any advice or you want to collaborate!
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Tomato picture][tomatoPictureUrl]
+* Tomato Picture by [CleanPNG][tomatoPictureUrl]
 * Icons by [icons8][icons8Url]
 
 
