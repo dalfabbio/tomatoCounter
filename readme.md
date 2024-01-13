@@ -62,9 +62,9 @@ With the Marvellous Tomato Counter you can:
 
 ### Built With
 
-* ![HTML](.\assets\icons\html.png)
-* ![CSS](.\assets\icons\css.png)
-* ![JS](.\assets\icons\JS.png)
+![HTML](assets/icons/html.png)\
+![CSS](assets/icons/css.png)\
+![JS](assets/icons/js.png)
 
 
 
@@ -97,7 +97,7 @@ Fork the repo and create a pull request, or open an issue with the tag enhanceme
 
 Feel free to reach me if you have any advice or you want to collaborate!
 
-[![linkedin](.\assets\icons\linkedin.png)][linkedinUrl]
+[![linkedin](assets/icons/linkedin.png)][linkedinUrl]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
