@@ -108,7 +108,6 @@ function stopStopwatch() {
   secondsPassed = 0;
   clearInterval(intervalStopWatch);
   clearInterval(intervalCreateTomato);
-  clearInterval(intervalUpdateCounter);
   stopwatchElement.textContent = '00:00:00';
 }
 
